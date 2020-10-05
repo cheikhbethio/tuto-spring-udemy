@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class LiteralValueInjection {
+public class LiteralValueInjectionFromFile {
 
 	public static void main(String[] args) {
 		//load  spring configuration file
