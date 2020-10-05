@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Di {
+public class SetterInjection {
 
 	public static void main(String[] args) {
 		//load  spring configuration file
@@ -10,10 +10,12 @@ public class Di {
 				ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		Coach theCoach = context.getBean("myCricketCoach", Coach.class);
 
 		// call method on the bean
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
+		
 		// close context
 		context.close();
 	}
