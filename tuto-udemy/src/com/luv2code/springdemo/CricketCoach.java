@@ -1,6 +1,11 @@
 package com.luv2code.springdemo;
 
 public class CricketCoach implements Coach{
+
+	private String email;
+	private String team;
+	private FortuneService fortuneService;
+	
 	public CricketCoach() {
 		System.out.println("CricketCoach: inside constructor");
 	}
@@ -10,7 +15,6 @@ public class CricketCoach implements Coach{
 		System.out.println("CricketCoach: inside serter metho");
 	}
 
-	public FortuneService fortuneService;
 		
 	@Override
 	public String getDailyWorkout() {
@@ -22,4 +26,21 @@ public class CricketCoach implements Coach{
 		return fortuneService.getFortune();
 	}
 
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		System.out.println("setEmail address");
+		this.email = email;
+	}
+	
+	public String getTeam() {
+		return team;
+	}
+	
+	public void setTeam(String team) {
+		System.out.println("set team");
+		this.team = team;
+	}
 }

@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SetterInjection {
+public class LiteralValueInjection {
 
 	public static void main(String[] args) {
 		//load  spring configuration file
@@ -10,11 +10,14 @@ public class SetterInjection {
 				ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("myCricketCoach", Coach.class);
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 
 		// call method on the bean
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
+
+		System.out.println(theCoach.getEmail());
+		System.out.println(theCoach.getTeam());
 		
 		// close context
 		context.close();
