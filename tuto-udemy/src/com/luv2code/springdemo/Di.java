@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class InversionOfControl {
+public class Di {
 
 	public static void main(String[] args) {
 		//load  spring configuration file
