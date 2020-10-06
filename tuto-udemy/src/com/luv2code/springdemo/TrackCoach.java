@@ -1,11 +1,13 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TrackCoach implements Coach{
 	@Autowired
+	@Qualifier("happyFortuneService")
 	private FortuneService fortuneService;
 	
 	// it is possible to do this injection with any method 
