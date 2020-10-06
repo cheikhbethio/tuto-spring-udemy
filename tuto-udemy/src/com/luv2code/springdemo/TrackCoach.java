@@ -1,11 +1,16 @@
 package com.luv2code.springdemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("myTrackCoach") // with no parameter the name/id of this bean will be Class name in camel-case format
+@Component
 public class TrackCoach implements Coach{
+	private FortuneService fortuneService;
 	
-	public TrackCoach() {}
+	@Autowired
+	public TrackCoach (FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 	
 
 	@Override
@@ -17,16 +22,7 @@ public class TrackCoach implements Coach{
 	@Override
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortune();
 	}
 	
-	// add init method (after constructor method call)
-	public void initMethod() {
-		System.out.println("init method call");
-	}
-	
-	// add destroy method (before bean destroy )
-	public void destroyMethod() {
-		System.out.println("destroy method call");
-	}
 }
