@@ -9,8 +9,11 @@ public class MyApp {
 				AnnotationConfigApplicationContext(SportgConf.class);
 		
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("trackCoach", Coach.class);
+		TrackCoach theCoach = context.getBean("trackCoach", TrackCoach.class);
 		System.out.println("MyApp " + theCoach.getDailyWorkout());
+
+		System.out.println("email " + theCoach.getEmail());
+		System.out.println("team " + theCoach.getTeam());
 		
 		// close context
 		context.close();
