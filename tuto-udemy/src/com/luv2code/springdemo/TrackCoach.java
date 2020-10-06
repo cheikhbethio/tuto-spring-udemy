@@ -1,5 +1,8 @@
 package com.luv2code.springdemo;
 
+import org.springframework.stereotype.Component;
+
+@Component("myTrackCoach") // with no parameter the name/id of this bean will be Class name in camel-case format
 public class TrackCoach implements Coach{
 	
 	public TrackCoach() {}

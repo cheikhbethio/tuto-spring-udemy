@@ -10,22 +10,9 @@ public class MyApp {
 				ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach0 = context.getBean("myCoach", Coach.class);
-		Coach theCoach1 = context.getBean("myCoach", Coach.class);
-
-		Boolean isSameReference = theCoach0 == theCoach1;
-		System.out.println("is the same reference ? " + isSameReference);	
-		System.out.println("what about the theCoach0 ? " + theCoach0);	
-		System.out.println("what about the theCoach1 ? " + theCoach1);
-		/*
-		 * in case we set in the applicationContext.xml file 
-		 * the scope to singleton or not set it (the default value)
-		 * the reference not be equal=> isSameReference == true
-		 * otherwise it will be true
-		 * */
-		
-		
-		
+		Coach theCoach = context.getBean("myTrackCoach", Coach.class);
+		System.out.println("from the main application " + theCoach.getDailyWorkout());
+				
 		// close context
 		context.close();
 	}
