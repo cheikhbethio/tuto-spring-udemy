@@ -10,8 +10,8 @@ public class MyApp {
 				ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach0 = context.getBean("myCoach", Coach.class);
-		Coach theCoach1 = context.getBean("myCoach", Coach.class);
+		Coach theCoach0 = context.getBean("trackCoach", Coach.class);
+		Coach theCoach1 = context.getBean("trackCoach", Coach.class);
 
 		Boolean isSameReference = theCoach0 == theCoach1;
 		System.out.println("is the same reference ? " + isSameReference);	

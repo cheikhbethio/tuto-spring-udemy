@@ -1,5 +1,10 @@
 package com.luv2code.springdemo;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
 public class TrackCoach implements Coach{
 	
 	public TrackCoach() {}
@@ -17,13 +22,4 @@ public class TrackCoach implements Coach{
 		return null;
 	}
 	
-	// add init method (after constructor method call)
-	public void initMethod() {
-		System.out.println("init method call");
-	}
-	
-	// add destroy method (before bean destroy )
-	public void destroyMethod() {
-		System.out.println("destroy method call");
-	}
 }
