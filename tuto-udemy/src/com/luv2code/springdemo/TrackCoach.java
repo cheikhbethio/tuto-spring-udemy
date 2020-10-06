@@ -5,12 +5,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TrackCoach implements Coach{
+	@Autowired
 	private FortuneService fortuneService;
 	
-	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
+	// it is possible to do this injection with any method 
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
 	
 
 	@Override
